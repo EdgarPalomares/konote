@@ -58,8 +58,7 @@ add_executable(PaymentGateService ${PaymentGateService})
 add_executable(Miner ${Miner})
 
 if (MSVC)
-  target_link_libraries(System ws2_32)
-  target_link_libraries(ConnectivityTool CryptoNoteCore Logging Crypto P2P Rpc Http Serialization Common System ${Boost_LIBRARIES})
+    target_link_libraries(ConnectivityTool CryptoNoteCore Logging Crypto P2P Rpc Http Serialization Common System ${Boost_LIBRARIES})
 
 endif ()
 
@@ -82,4 +81,4 @@ set_property(TARGET SimpleWallet PROPERTY OUTPUT_NAME "simplewallet")
 set_property(TARGET PaymentGateService PROPERTY OUTPUT_NAME "walletd")
 set_property(TARGET Miner PROPERTY OUTPUT_NAME "miner")
 #TODO Specify the name of daemon for your currency
-set_property(TARGET Daemon PROPERTY OUTPUT_NAME "konoted")
+set_property(TARGET Daemon PROPERTY OUTPUT_NAME "konopyd")
